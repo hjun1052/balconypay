@@ -1,0 +1,35 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <script>
+	document.oncontextmenu = function(){return false;}
+  </script>
+  <title>Balcony Pay 결제 페이지(보안)</title>
+  <link rel="icon" href="iconb3.png">
+</head>
+<script>
+  function btnalert(){
+    alert("결제하시겠습니까?");
+    setTimeout(function(){alert("다시 입력해 주세요.");},100);
+    setTimeout(function(){window.location.reload();},100);
+  }
+</script>
+<body bgcolor=#f5f5dc>
+  <script language="javascript">
+    var email;
+  </script>
+  <div style="width:100%; height:5%; background-color:none; float:left; margin-left:0%; margin-right:0%; margin-top:0px; margin-bottom:0px; text-align:center;">
+    <h1>결제하기</h1>
+  </div>
+  <input type="text" class="input_text" placeholder="금액" value="">
+  <h5 style=display:inline>원</h5>
+  <br>
+  <input type="text" class="input_text" placeholder="Balcony Pay 회원번호" value="">
+  <br>
+  <input type="text" class="input_text" placeholder="비밀번호" value="">
+  <br>
+  <div class="btn">
+   <INPUT type='BUTTON' value='확인' onclick='btnalert()'>
+  <INPUT type='BUTTON' value='나가기' onclick='history.go(-1)'>
+</body>
+</html>

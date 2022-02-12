@@ -1,0 +1,45 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <script>
+	document.oncontextmenu = function(){return false;}
+  </script>
+  <title>Balcony Pay</title>
+  <link rel="icon" href="iconb1.png">
+</head>
+<script>
+  function cctf(){
+    var Ccert;
+    Ccert=prompt("고객인증코드를 입력해 주세요.");
+    setTimeout(function(){},100);
+    if (Ccert == "blyc1002"){
+      alert("인증이 정상 완료되었습니다.");
+      var thn=document.createElement( 'h5' );
+      var tn=document.createTextNode( "✅인증됨" );
+    }else{
+      alert("다시 입력해 주세요.");
+      Ccert;
+    }
+  }
+</script>
+<script>
+  function ok(){
+    document.write("인증됨".fontsize(7));
+  }
+</script>
+<body bgcolor=#f5f5dc oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onkeydown="return false">
+  <div style="width:100%; height:5%; background-color:none; float:left; margin-left:0%; margin-right:0%; margin-top:0px; margin-bottom:0px; text-align:center;">
+    <h1>발코니 통합 결제서비스</h1>
+  </div>
+  <div style="text-align:center;">
+    <img src="iconb1.png">
+  </div>
+  <a href="wpay.html">
+    <div style="position: fixed; bottom: 10%; left:20%;">
+      <img src='wbtn.png' height=15% width=30%>
+    </div>
+  </a>
+  <div style="position: fixed; bottom: 10%; right:20%;">
+    <img onclick=cctf() src='btn1.png' align="right" height=15% width=30%>
+  </div>
+</body>
